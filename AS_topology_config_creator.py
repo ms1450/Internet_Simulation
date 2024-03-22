@@ -96,20 +96,21 @@ def print_aslevel_links_students(list_of_ASes, list_of_IXPs):
 def print_l3_routers():
     with open('./Configuration/l3_routers.txt', 'w', newline='\n') as file:
         file.write("RTRA\tDNS\thost:miniinterneteth/d_host\tvtysh\n")
-        file.write("RTRB\tN/A\thost:miniinterneteth/d_routinator\tvtysh\n")
+        file.write("RTRB\tN/A\thost:miniinterneteth/d_host\tvtysh\n")
 
 
 # Print l3_routers_krill.txt
 def print_l3_routers_krill():
     with open('./Configuration/l3_routers_krill.txt', 'w', newline='\n') as file:
         file.write("RTRA\tDNS\tkrill:miniinterneteth/d_host\tvtysh\n")
-        file.write("RTRB\tN/A\thost:miniinterneteth/d_routinator\tvtysh\n")
+        file.write("RTRB\tN/A\thost:miniinterneteth/d_host\tvtysh\n")
 
 
 # Print l3_links.txt
 def print_l3_links():
     with open('./Configuration/l3_links.txt', 'w', newline='\n') as file:
         file.write("RTRA\tRTRB\t100000\t10ms\n")
+        file.write("RTRB\tRTRA\t100000\t10ms\n")
 
 
 if __name__ == "__main__":

@@ -1,2 +1,2 @@
 RTRA	DNS	host:miniinterneteth/d_host	vtysh
-RTRB	N/A	host:miniinterneteth/d_routinator	vtysh
+RTRB	N/A	host:miniinterneteth/d_host	vtysh
