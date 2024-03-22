@@ -1,10 +1,12 @@
 import networkx as nx
 import plotly.graph_objects as go
+import plotly.io as pio
+import kaleido
 import csv
 
 
 # Function to create a graph and its visualization
-def create_graph(nodes, edges, edge_types, title, exclude_ixp=False):
+def create_graph(nodes, edges, edge_types, exclude_ixp=False):
     G = nx.Graph()
     for node, attributes in nodes.items():
         if not exclude_ixp or ('IXP' not in attributes['type']):
@@ -15,7 +17,7 @@ def create_graph(nodes, edges, edge_types, title, exclude_ixp=False):
 
     node_color_map = {'Tier 1 AS': 'red', 'Transit AS': 'orange', 'Stub AS': 'yellow'}
     edge_color_map = {'P2P': 'blue', 'P2C': 'green'}
-    pos = nx.spring_layout(G)
+    pos = nx.spring_layout(G, k=0.15, iterations=200)
 
     node_color = [node_color_map.get(nodes[node]['type'], 'grey') for node in G.nodes()]
 
@@ -52,8 +54,6 @@ def create_graph(nodes, edges, edge_types, title, exclude_ixp=False):
 
     fig = go.Figure(data=edge_traces + [node_trace],
                     layout=go.Layout(
-                        title=f'<br>{title}',
-                        titlefont_size=16,
                         showlegend=False,
                         hovermode='closest',
                         margin=dict(b=0, l=0, r=0, t=0),
@@ -87,10 +87,12 @@ if __name__ == '__main__':
 
     # Create and show the first graph (including all connections)
     print("[+]\tShowing Network Graph of ASes and IXPs")
-    fig1 = create_graph(nodes, edges, edge_types, 'Network graph of ASes and IXPs')
-    fig1.show()
+    fig1 = create_graph(nodes, edges, edge_types)
+    pio.write_image(fig1, './Topology/Topology_Complete.png', width=1920, height=1080)
+    # fig1.show()
 
     # Create and show the second graph (excluding IXPs)
     print("[+]\tShowing Network Graph of ASes")
-    fig2 = create_graph(nodes, edges, edge_types, 'Network graph of ASes', exclude_ixp=True)
-    fig2.show()
+    fig2 = create_graph(nodes, edges, edge_types, exclude_ixp=True)
+    pio.write_image(fig2, './Topology/Topology_ASes.png', width=1920, height=1080)
+    # fig2.show()

@@ -1,0 +1,2 @@
+RTRA	DNS	krill:miniinterneteth/d_host	vtysh
+RTRB	N/A	host:miniinterneteth/d_routinator	vtysh
