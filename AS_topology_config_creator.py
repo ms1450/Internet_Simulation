@@ -36,18 +36,18 @@ def print_aslevel_links(list_of_ASes):
             for customer in entry.customers:
                 if customer not in completed:
                     string = str(entry.as_id) + "\tRTRA\tProvider\t" + str(
-                        customer.as_id) + "\tRTRA\tCustomer\t100000\t2.5ms\t179." + str(entry.as_id) + "." + str(
+                        customer.as_id) + "\tRTRA\tCustomer\t100000\t2.5ms\t50ms\t179." + str(entry.as_id) + "." + str(
                         customer.as_id) + ".0/24\n"
                     file.write(string)
             for peer in entry.peers:
                 if peer not in completed:
                     string = str(entry.as_id) + "\tRTRA\tPeer\t" + str(
-                        peer.as_id) + "\tRTRA\tPeer\t100000\t2.5ms\t179." + str(entry.as_id) + "." + str(
+                        peer.as_id) + "\tRTRA\tPeer\t100000\t2.5ms\t50ms\t179." + str(entry.as_id) + "." + str(
                         peer.as_id) + ".0/24\n"
                     file.write(string)
             for ixp in entry.ixps:
                 string = str(entry.as_id) + "\tRTRB\tPeer\t" + str(
-                    ixp.ixp_id) + "\tNone\tPeer\t100000\t2.5ms\t" + get_ixp_connections(entry, ixp) + "\n"
+                    ixp.ixp_id) + "\tNone\tPeer\t100000\t2.5ms\t50ms\t" + get_ixp_connections(entry, ixp) + "\n"
                 file.write(string)
 
 
@@ -109,8 +109,8 @@ def print_l3_routers_krill():
 # Print l3_links.txt
 def print_l3_links():
     with open('./Configuration/l3_links.txt', 'w', newline='\n') as file:
-        file.write("RTRA\tRTRB\t100000\t10ms\n")
-        file.write("RTRB\tRTRA\t100000\t10ms\n")
+        file.write("RTRA\tRTRB\t100000\t10ms\t50ms\n")
+        file.write("RTRB\tRTRA\t100000\t10ms\t50ms\n")
 
 
 if __name__ == "__main__":
