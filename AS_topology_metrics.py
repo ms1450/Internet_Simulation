@@ -68,20 +68,20 @@ def topology_metrics(links_file):
 
 
 # Form connections from network data
-def form_network_connections(AS, network_data):
+def form_network_connections(AS, network_data, posioned_pair=None):
     connections = []
     for values in network_data:
         if len(values[2]) == 1:
             pair = tuple(sorted((int(AS), int(values[2][0]))))
-            if pair not in connections and AS != values[2][0]:
+            if pair not in connections and AS != values[2][0] and pair != posioned_pair:
                 connections.append(pair)
         elif len(values[2]) > 1:
             first_pair = tuple(sorted((int(AS), int(values[2][0]))))
-            if first_pair not in connections and AS != values[2][0]:
+            if first_pair not in connections and AS != values[2][0] and first_pair != posioned_pair:
                 connections.append(first_pair)
             for i in range(len(values[2]) - 1):
                 next_pair = tuple(sorted((int(values[2][i]), int(values[2][i + 1]))))
-                if next_pair not in connections and values[2][i] != values[2][i + 1]:
+                if next_pair not in connections and values[2][i] != values[2][i + 1] and next_pair != posioned_pair:
                     connections.append(next_pair)
     return connections
 
@@ -96,14 +96,16 @@ def get_non_ixp_metrics(connections, IXPs):
     return count
 
 
-def get_network_metrics(folder_path, ixp_nodes, num_links):
+def get_network_metrics(folder_path, ixp_nodes, is_poisoned=False, poisoned_pairs=None):
     files = os.listdir(folder_path)
     sorted_files = sorted(files, key=lambda x: int(re.search(r'(\d+)', x).group()) if re.search(r'(\d+)', x) else float('inf'))
     for filename in sorted_files:
         file_path = os.path.join(folder_path, filename)
         if os.path.isfile(file_path):
             AS, network_data = extract_network_data(file_path)
-            ipbgp_connections = form_network_connections(AS, network_data)
+            if is_poisoned:
+                poisoned_pairs = tuple(sorted((int(poisoned_pairs[0]), int(poisoned_pairs[1]))))
+            ipbgp_connections = form_network_connections(AS, network_data, poisoned_pairs)
             num_non_ixp_connections = get_non_ixp_metrics(ipbgp_connections, ixp_nodes)
             print(f'[+]\t\t{filename}\t\tAS: {AS}\tNon-IXP Connections: {num_non_ixp_connections}/{len(ipbgp_connections)}(~{int((num_non_ixp_connections/num_non_ixp_links)*100)}%)\tEntries: {len(network_data)}')
 
@@ -112,13 +114,13 @@ if __name__ == '__main__':
     node_files = './Topology/Topology_Nodes_50.csv'
     link_files = './Topology/Topology_Links_50.csv'
     ipbgp_folder = './IP_BGP/Pre-Poisoning/'
-    #ipbgp_folder = './IP_BGP/Post-Poisoning/50-2/'
+    #ipbgp_folder = './IP_BGP/Post-Poisoning/30/30-1/'
     print("[+]\tReading topology...")
     ixp_nodes = get_ixp_nodes(node_files)
     links = topology_metrics(link_files)
     num_non_ixp_links = get_non_ixp_metrics(links, ixp_nodes)
     print(f'[+]\tComplete Topology Metrics\tNon-IXP Connections: {num_non_ixp_links}/{len(links)}')
-    get_network_metrics(ipbgp_folder, ixp_nodes, num_non_ixp_links)
+    get_network_metrics(ipbgp_folder, ixp_nodes)
 
 
 
