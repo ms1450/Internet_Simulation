@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad934d90-300e-4a4f-a8ee-80482bbed22e" name="Changes" comment="More updates, work in progress">
-      <change afterPath="$PROJECT_DIR$/clean_and_extract_ipbgp.sh" afterDir="false" />
+    <list default="true" id="ad934d90-300e-4a4f-a8ee-80482bbed22e" name="Changes" comment="Creating a script to make my life easier">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean_and_extract_ipbgp.sh" beforeDir="false" afterPath="$PROJECT_DIR$/clean_and_extract_ipbgp.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +209,7 @@
       <workItem from="1711141377452" duration="2114000" />
       <workItem from="1711387734884" duration="1711000" />
       <workItem from="1711394974514" duration="775000" />
-      <workItem from="1711551763551" duration="6136000" />
+      <workItem from="1711551763551" duration="6993000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up the repositories and updated the topology files.">
       <option name="closed" value="true" />
@@ -251,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711557097217</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Creating a script to make my life easier">
+      <option name="closed" value="true" />
+      <created>1711558790688</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711558790688</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +281,8 @@
     <MESSAGE value="Fixed an issue with internal links" />
     <MESSAGE value="Updated config due to change in commit from mini-internet repository fix" />
     <MESSAGE value="More updates, work in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="More updates, work in progress" />
+    <MESSAGE value="Creating a script to make my life easier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating a script to make my life easier" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Internet_Simulation$AS_topology_visualize.coverage" NAME="AS_topology_visualize Coverage Results" MODIFIED="1711137382024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
