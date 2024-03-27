@@ -1,0 +1,18 @@
+Posioning for AS: 30
+Completed:
+
+Poisons:
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 29
+
+POISONING CREATION:
+conf t
+router bgp 30
+route-map {POISON_AS}-POISON permit 10
+set as-path prepend {POISON_AS}
+end
+conf t
+router bgp 30
+neighbor 179.12.30.12 route-map [POISON_AS]-POISON out
+neighbor 179.29.30.29 route-map [POISON_AS]-POISON out
+end
+write file

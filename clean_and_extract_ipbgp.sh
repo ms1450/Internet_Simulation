@@ -24,25 +24,30 @@ done
 echo "[+] Cleaning Completed"
 
 # Second loop: Check the size of looking_glass.txt files and move them if conditions are met
-echo "[+] Moving IP BGP Paths"
+echo "[+] Copying IP BGP Paths"
 for ((current=1; current<=num; current++))
 do
     src_file="${base_dir}/platform/groups/g${current}/RTRA/looking_glass.txt"
     dest_file="${ipbgp_dir}/${current}.txt"
 
     while true; do
-        if [[ -f "$src_file" && $(stat --printf="%s" "$src_file") -ge 4000 ]]; then
-            mv "$src_file" "$dest_file"
-            echo "[+] Moved $src_file to $dest_file"
+        # Copy the file
+        cp "$src_file" "$dest_file"
+        echo "[+] Copied $src_file to $dest_file"
+
+        # Check the size of the copied file
+        if [[ -f "$dest_file" && $(stat --printf="%s" "$dest_file") -ge 4000 ]]; then
+            echo "[+] File $dest_file is valid."
             break
         else
-            echo "[-] File $src_file is smaller than 4000 bytes. Waiting..."
+            echo "[-] File $dest_file is smaller than 4000 bytes. Waiting..."
             sleep 3
+            # It will copy again because it's inside the loop, until the file size condition is met
         fi
     done
 done
 
-echo "[+] Completed Moving files processed. Zipping..."
+echo "[+] Completed copying files processed. Zipping..."
 
 # Go to the IPBGP directory
 cd "${ipbgp_dir}"
