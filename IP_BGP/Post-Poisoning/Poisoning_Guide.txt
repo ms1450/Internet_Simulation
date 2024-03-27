@@ -1,0 +1,15 @@
+Posioning for AS: {AS}
+Poisons:
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, {PEERS}
+
+POISONING CREATION:
+conf t
+router bgp {AS}
+route-map {POISON_AS}-POISON permit 10
+set as-path prepend {POISON_AS}
+end
+conf t
+router bgp {AS}
+neighbor {NEIGHBOR} route-map [POISON_AS]-POISON out
+end
+write file
