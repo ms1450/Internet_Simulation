@@ -4,112 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad934d90-300e-4a4f-a8ee-80482bbed22e" name="Changes" comment="Updated config due to change in commit from mini-internet repository fix">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils/ipbgp_extractor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clear_bgp_data.sh" afterDir="false" />
+    <list default="true" id="ad934d90-300e-4a4f-a8ee-80482bbed22e" name="Changes" comment="More updates, work in progress">
+      <change afterPath="$PROJECT_DIR$/clean_and_extract_ipbgp.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AS_topology_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/AS_topology_metrics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/17.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/22.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/23.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/24.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/25.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/26.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/27.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/28.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/29.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/30.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/31.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/32.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/33.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/34.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/35.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/36.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/37.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/38.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/39.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/40.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/41.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/42.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/43.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/44.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/45.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/46.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/47.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/48.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/49.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/50-2/9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/16.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/17.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/18.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/18.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/19.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/19.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/20.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/21.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/21.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/22.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/22.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/23.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/23.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/24.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/24.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/25.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/25.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/26.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/26.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/27.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/27.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/28.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/28.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/29.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/29.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/30.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/31.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/31.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/32.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/32.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/33.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/33.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/34.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/34.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/35.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/35.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/36.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/36.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/37.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/37.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/38.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/38.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/39.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/39.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/40.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/40.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/41.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/41.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/42.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/42.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/43.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/43.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/44.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/44.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/45.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/45.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/46.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/46.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/47.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/47.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/48.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/48.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/49.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/49.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/50.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/50.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/9.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +209,7 @@
       <workItem from="1711141377452" duration="2114000" />
       <workItem from="1711387734884" duration="1711000" />
       <workItem from="1711394974514" duration="775000" />
-      <workItem from="1711551763551" duration="5222000" />
+      <workItem from="1711551763551" duration="6136000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up the repositories and updated the topology files.">
       <option name="closed" value="true" />
@@ -346,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711143464654</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="More updates, work in progress">
+      <option name="closed" value="true" />
+      <created>1711557097217</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711557097217</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +272,8 @@
     <MESSAGE value="Cleaned up the repositories and updated the topology files." />
     <MESSAGE value="Fixed an issue with internal links" />
     <MESSAGE value="Updated config due to change in commit from mini-internet repository fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated config due to change in commit from mini-internet repository fix" />
+    <MESSAGE value="More updates, work in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="More updates, work in progress" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Internet_Simulation$AS_topology_visualize.coverage" NAME="AS_topology_visualize Coverage Results" MODIFIED="1711137382024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
