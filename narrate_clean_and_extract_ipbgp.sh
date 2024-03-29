@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Prompt for AS and POISON_AS
-read -p "Enter AS: " AS
-read -p "Enter POISON_AS: " POISON_AS
+read -p "[i] Enter AS: " AS
+read -p "[i] Enter POISONED AS: " POISON_AS
 
 # Initialize the configuration output
 output="conf t\n"
@@ -16,7 +16,7 @@ output+="router bgp $AS\n"
 # Read neighbor inputs
 counter=1
 while true; do
-    read -p "Enter Neighbor_$counter (leave empty to stop): " neighbor
+    read -p "[i] Enter NEIGHBOUR $counter (leave empty to stop): " neighbor
     if [ -z "$neighbor" ]; then
         break
     fi
@@ -49,6 +49,8 @@ do
     docker exec "${current}_RTRArouter" vtysh -c 'clear ip bgp *'
 done
 echo "[+] Cleaning Completed"
+echo "[~] Sleeping for 20 Seconds to let BGP messages propagate..."
+sleep 20
 
 # Copy IP BGP Paths
 echo "[+] Copying IP BGP Paths"
@@ -59,13 +61,12 @@ do
 
     while true; do
         cp "$src_file" "$dest_file"
-        echo "[+] Copied $src_file to $dest_file"
 
         if [[ -f "$dest_file" && $(stat --printf="%s" "$dest_file") -ge 20000 ]]; then
-            echo "[+] File $dest_file is valid."
+            echo "[+] Copied $src_file"
             break
         else
-            echo "[-] File $dest_file is smaller than 20000 bytes. Waiting..."
+            echo "[~] $dest_file was smaller than 20,000 bytes. Waiting 3 seconds..."
             sleep 3
         fi
     done
