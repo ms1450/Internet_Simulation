@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad934d90-300e-4a4f-a8ee-80482bbed22e" name="Changes" comment="Added helper files">
+    <list default="true" id="ad934d90-300e-4a4f-a8ee-80482bbed22e" name="Changes" comment="Fixed some bugs with the script">
+      <change afterPath="$PROJECT_DIR$/poisoning_guide.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clean_and_extract_ipbgp.sh" beforeDir="false" afterPath="$PROJECT_DIR$/clean_and_extract_ipbgp.sh" afterDir="false" />
@@ -225,7 +226,9 @@
       <workItem from="1711387734884" duration="1711000" />
       <workItem from="1711394974514" duration="775000" />
       <workItem from="1711551763551" duration="7580000" />
-      <workItem from="1711564585624" duration="313000" />
+      <workItem from="1711564585624" duration="804000" />
+      <workItem from="1711659349132" duration="475000" />
+      <workItem from="1711726383768" duration="393000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up the repositories and updated the topology files.">
       <option name="closed" value="true" />
@@ -291,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711560002489</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed some bugs with the script">
+      <option name="closed" value="true" />
+      <created>1711564916353</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711564916353</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +327,8 @@
     <MESSAGE value="Creating a script to make my life easier" />
     <MESSAGE value="Improved the clean_and_extract_ipbgp.sh script, cleaned up folders and removed junk scripts" />
     <MESSAGE value="Added helper files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added helper files" />
+    <MESSAGE value="Fixed some bugs with the script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some bugs with the script" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Internet_Simulation$AS_topology_visualize.coverage" NAME="AS_topology_visualize Coverage Results" MODIFIED="1711137382024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

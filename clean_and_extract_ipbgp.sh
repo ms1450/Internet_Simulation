@@ -27,7 +27,7 @@ echo "[+] Cleaning Completed"
 echo "[+] Copying IP BGP Paths"
 for ((current=1; current<=num; current++))
 do
-    src_file="${base_dir}/platform/groups/g${current}/RTRA/looking_glass.txt"
+    src_file="${base_dir}/platform/groups/g${current}/RTRA/looking_glass_json.txt"
     dest_file="${ipbgp_dir}/${current}.txt"
 
     while true; do
@@ -36,7 +36,7 @@ do
         echo "[+] Copied $src_file to $dest_file"
 
         # Check the size of the copied file
-        if [[ -f "$dest_file" && $(stat --printf="%s" "$dest_file") -ge 4000 ]]; then
+        if [[ -f "$dest_file" && $(stat --printf="%s" "$dest_file") -ge 20000 ]]; then
             echo "[+] File $dest_file is valid."
             break
         else
