@@ -1,9 +1,37 @@
 #!/bin/bash
 
+# Prompt for AS and POISON_AS
+read -p "Enter AS: " AS
+read -p "Enter POISON_AS: " POISON_AS
+
+# Initialize the configuration output
+output="conf t\n"
+output+="router bgp $AS\n"
+output+="route-map $POISON_AS-POISON permit 10\n"
+output+="set as-path prepend $POISON_AS\n"
+output+="end\n"
+output+="conf t\n"
+output+="router bgp $AS\n"
+
+# Read neighbor inputs
+counter=1
+while true; do
+    read -p "Enter Neighbor_$counter (leave empty to stop): " neighbor
+    if [ -z "$neighbor" ]; then
+        break
+    fi
+    output+="neighbor $neighbor route-map $POISON_AS-POISON out\n"
+    ((counter++))
+done
+
+output+="end\nwrite file"
+
+# Display the output
+echo -e "$output"
+
+# Wait for user input to proceed
+read -p "Press enter to continue with the Configuration Cleaner and Extractor script..."
 echo "Configuration Cleaner and Extractor"
-# Ask for a number and read it into a variable
-echo -n "[i] Enter AS: "
-read num_zip
 base_dir=/home/student/Desktop/Simulation/
 ipbgp_dir="${base_dir}/IP_BGP_Path/"
 
@@ -13,17 +41,16 @@ num=50
 # Create the directory if it does not exist
 mkdir -p "${ipbgp_dir}"
 
-# First loop: Clear IP BGP sessions for each router
+# Clear IP BGP sessions for each router
 echo "[+] Cleaning IP BGP sessions for each AS"
 for ((current=1; current<=num; current++))
 do
     echo "[+] Cleaning ${current}.."
-    # Execute the command in the docker container for each router
     docker exec "${current}_RTRArouter" vtysh -c 'clear ip bgp *'
 done
 echo "[+] Cleaning Completed"
 
-# Second loop: Check the size of looking_glass.txt files and move them if conditions are met
+# Copy IP BGP Paths
 echo "[+] Copying IP BGP Paths"
 for ((current=1; current<=num; current++))
 do
@@ -31,31 +58,24 @@ do
     dest_file="${ipbgp_dir}/${current}.txt"
 
     while true; do
-        # Copy the file
         cp "$src_file" "$dest_file"
         echo "[+] Copied $src_file to $dest_file"
 
-        # Check the size of the copied file
         if [[ -f "$dest_file" && $(stat --printf="%s" "$dest_file") -ge 20000 ]]; then
             echo "[+] File $dest_file is valid."
             break
         else
-            echo "[-] File $dest_file is smaller than 4000 bytes. Waiting..."
+            echo "[-] File $dest_file is smaller than 20000 bytes. Waiting..."
             sleep 3
-            # It will copy again because it's inside the loop, until the file size condition is met
         fi
     done
 done
 
-echo "[+] Completed copying files processed. Zipping..."
+echo "[+] Completed copying files. Zipping..."
 
-# Go to the IPBGP directory
 cd "${ipbgp_dir}"
+zip "${AS}-${POISON_AS}.zip" *.txt
+echo "[+] Completed Packaging ${AS}-${POISON_AS}.zip"
 
-# Create a zip archive with all the .txt files
-zip "${num_zip}.zip" *.txt
-echo "[+] Completed Packaging ${num_zip}.zip"
-
-# Cleaning temporary txt files
 rm -f *.txt
 echo "[+] Completed, Goodbye!"
