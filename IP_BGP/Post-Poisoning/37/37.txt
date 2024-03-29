@@ -1,0 +1,20 @@
+Posioning for AS: 37
+
+Poisons:
+1,2,3,4,5,6,7,8,9,10,11,12,13
+
+POISONING CREATION:
+conf t
+router bgp 37
+route-map [POISON_AS]-POISON permit 10
+set as-path prepend [POISON_AS]
+end
+conf t
+router bgp 37
+neighbor 179.9.37.9 route-map [POISON_AS]-POISON out
+neighbor 179.12.37.12 route-map [POISON_AS]-POISON out
+end
+write file
+
+RESET SESSIONS
+clear ip bgp *

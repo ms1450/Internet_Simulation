@@ -4,10 +4,138 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad934d90-300e-4a4f-a8ee-80482bbed22e" name="Changes" comment="Improved upon the clean_and_extract_ipbgp.sh">
+    <list default="true" id="ad934d90-300e-4a4f-a8ee-80482bbed22e" name="Changes" comment="Improved upon the clean_and_extract_ipbgp.sh, now it narrates and then cleans and then waits 20s and then extracts the json looking glass data.">
+      <change afterPath="$PROJECT_DIR$/AS_topology_tracker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/37/37.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clean_and_extract_ipbgp.sh" beforeDir="false" afterPath="$PROJECT_DIR$/narrate_clean_and_extract_ipbgp.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poisoning_guide.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-1 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-10 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-11 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-12 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-13 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-2 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-29 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-3 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-4 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-5 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-6 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-7 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-8 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30-9 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/30/30.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-1 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-10 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-11 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-12 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/17.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/18.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/22.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/23.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/24.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/26.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/27.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/28.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/29.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/31.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/32.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/34.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/37.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/39.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/40.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/41.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/42.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/45.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/46.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/48.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/49.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-13 (1)/9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-2 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-3 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-4 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-5 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-6 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-7 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-8 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Post-Poisoning/41/41-9 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/17.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/18.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/22.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/23.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/24.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/26.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/27.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/28.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/29.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/31.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/32.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/34.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/37.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/39.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/40.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/41.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/42.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/45.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/46.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/48.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/49.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IP_BGP/Pre-Poisoning/9.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,25 +175,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.AS_topology_config_creator.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AS_topology_generator.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AS_topology_metrics.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AS_topology_visualize.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ipbgp_extractor.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSI/OneDrive - rit.edu/Semester/Spring 2024/CSEC 793/Experimentation/Internet_Simulation/IP_BGP/Post-Poisoning/41&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.AS_topology_config_creator.executor": "Run",
+    "Python.AS_topology_generator.executor": "Run",
+    "Python.AS_topology_metrics.executor": "Run",
+    "Python.AS_topology_tracker.executor": "Run",
+    "Python.AS_topology_visualize.executor": "Run",
+    "Python.ipbgp_extractor.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/MSI/OneDrive - rit.edu/Semester/Spring 2024/CSEC 793/Experimentation/Internet_Simulation/IP_BGP/Post-Poisoning/41",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\MSI\OneDrive - rit.edu\Semester\Spring 2024\CSEC 793\Experimentation\Internet_Simulation\IP_BGP\Post-Poisoning\41" />
@@ -79,7 +208,7 @@
       <recent name="C:\Users\MSI\OneDrive - rit.edu\Semester\Spring 2024\CSEC 793\Experimentation\Internet_Simulation\IP_BGP\Post-Poisoning\41\41-1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.AS_topology_metrics">
+  <component name="RunManager" selected="Python.AS_topology_tracker">
     <configuration name="AS_topology_config_creator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Internet_Simulation" />
       <option name="ENV_FILES" value="" />
@@ -103,29 +232,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="AS_topology_generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Internet_Simulation" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AS_topology_generator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="AS_topology_metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Internet_Simulation" />
       <option name="ENV_FILES" value="" />
@@ -141,6 +247,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AS_topology_metrics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AS_topology_tracker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Internet_Simulation" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AS_topology_tracker.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,11 +326,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.AS_topology_tracker" />
         <item itemvalue="Python.AS_topology_metrics" />
         <item itemvalue="Python.ipbgp_extractor" />
         <item itemvalue="Python.AS_topology_config_creator" />
         <item itemvalue="Python.AS_topology_visualize" />
-        <item itemvalue="Python.AS_topology_generator" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +356,7 @@
       <workItem from="1711551763551" duration="7580000" />
       <workItem from="1711564585624" duration="804000" />
       <workItem from="1711659349132" duration="475000" />
-      <workItem from="1711726383768" duration="1897000" />
+      <workItem from="1711726383768" duration="16610000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up the repositories and updated the topology files.">
       <option name="closed" value="true" />
@@ -317,7 +446,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711727286166</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Improved upon the clean_and_extract_ipbgp.sh, now it narrates and then cleans and then waits 20s and then extracts the json looking glass data.">
+      <option name="closed" value="true" />
+      <created>1711728581815</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711728581815</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,10 +482,12 @@
     <MESSAGE value="Fixed some bugs with the script" />
     <MESSAGE value="Few changes for shifting to json" />
     <MESSAGE value="Improved upon the clean_and_extract_ipbgp.sh" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved upon the clean_and_extract_ipbgp.sh" />
+    <MESSAGE value="Improved upon the clean_and_extract_ipbgp.sh, now it narrates and then cleans and then waits 20s and then extracts the json looking glass data." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved upon the clean_and_extract_ipbgp.sh, now it narrates and then cleans and then waits 20s and then extracts the json looking glass data." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Internet_Simulation$AS_topology_visualize.coverage" NAME="AS_topology_visualize Coverage Results" MODIFIED="1711137382024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Internet_Simulation$AS_topology_tracker.coverage" NAME="AS_topology_tracker Coverage Results" MODIFIED="1711742745296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Internet_Simulation$ipbgp_extractor.coverage" NAME="ipbgp_extractor Coverage Results" MODIFIED="1711553318358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Utils" />
     <SUITE FILE_PATH="coverage/Internet_Simulation$AS_topology_metrics.coverage" NAME="AS_topology_metrics Coverage Results" MODIFIED="1711556247608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Internet_Simulation$AS_topology_generator.coverage" NAME="AS_topology_generator Coverage Results" MODIFIED="1711135848397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
