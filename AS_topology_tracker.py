@@ -174,8 +174,8 @@ if __name__ == '__main__':
     #check_validity(pre_poisoning_folder)
     prepoisoned_dict = store_prepoisoned_data(pre_poisoning_folder)
 
-    post_poisoning_folder = './IP_BGP/Post-Poisoning/37/37-12/'
+    post_poisoning_folder = './IP_BGP/Post-Poisoning/21/21-1/'
     print('[+]\tInvalid Paths Created:')
-    poisoned_invalid_links = check_validity(post_poisoning_folder, [(12, 37)])
+    poisoned_invalid_links = check_validity(post_poisoning_folder, [(1, 21)])
     print('[+]\tComparison of BGP Data with Pre-Poisoned Data:')
-    check_poisoning_data(post_poisoning_folder, [(12, 37)], prepoisoned_dict, poisoned_invalid_links)
+    check_poisoning_data(post_poisoning_folder, [(1, 21)], prepoisoned_dict, poisoned_invalid_links)

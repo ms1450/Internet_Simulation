@@ -8,7 +8,7 @@ read -p "[i] Enter POISONED AS: " POISON_AS
 output="conf t\n"
 output+="router bgp $AS\n"
 output+="route-map $POISON_AS-POISON permit 10\n"
-output+="set as-path prepend $POISON_AS\n"
+output+="set as-path prepend $POISON_AS $AS\n"
 output+="end\n"
 output+="conf t\n"
 output+="router bgp $AS\n"
