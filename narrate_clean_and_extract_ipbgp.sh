@@ -4,30 +4,51 @@
 read -p "[i] Enter AS: " AS
 read -p "[i] Enter POISONED AS: " POISON_AS
 
-# Initialize the configuration output
-output="conf t\n"
-output+="router bgp $AS\n"
-output+="route-map $POISON_AS-POISON permit 10\n"
-output+="set as-path prepend $POISON_AS $AS\n"
-output+="end\n"
-output+="conf t\n"
-output+="router bgp $AS\n"
+declare -A neighbors
+neighbors[15]="43,11,13"
+neighbors[16]="13"
+neighbors[17]="49,5"
+neighbors[18]="6,10"
+neighbors[20]="39,5,10"
+neighbors[24]="36,12"
+neighbors[28]="12,7"
+neighbors[29]="30,12,7"
+neighbors[32]="11,10"
+neighbors[36]="24,4"
+neighbors[40]="46,9"
+neighbors[42]="6,1"
+neighbors[43]="15,11,5"
+neighbors[44]="13,2"
+neighbors[46]="40,8,10"
+neighbors[49]="17,3"
 
-# Read neighbor inputs
-counter=1
-while true; do
-    read -p "[i] Enter NEIGHBOUR $counter (leave empty to stop): " neighbor
-    if [ -z "$neighbor" ]; then
-        break
-    fi
-    output+="neighbor $neighbor route-map $POISON_AS-POISON out\n"
-    ((counter++))
-done
+# Process only the specified AS
+if [[ -n ${neighbors[$AS]} ]]; then
+    IFS=',' read -r -a neighbor_ips <<< "${neighbors[$AS]}"
+    echo "[+] Configuring AS ${AS}.."
 
-output+="end\nwrite file"
+    cmd="conf t
+router bgp ${AS}
+route-map ${POISON_AS}-POISON permit 10
+set as-path prepend ${POISON_AS}"
 
-# Display the output
-echo -e "$output"
+    for NEIGHBOR in "${neighbor_ips[@]}"; do
+        NEIGHBOR_IP="179.${NEIGHBOR}.${AS}.${NEIGHBOR}"
+        cmd+="
+neighbor ${NEIGHBOR_IP} route-map ${POISON_AS}-POISON out"
+    done
+
+    cmd+="
+end
+write file"
+
+echo "CHECK THE FOLLOWING: "
+read -p "${cmd}"
+    docker exec "${AS}_RTRArouter" vtysh -c "$cmd"
+else
+    echo "No predefined neighbors for AS ${AS}. Please manually configure the poisoning."
+fi
+
 
 # Wait for user input to proceed
 read -p "Press enter to continue with the Configuration Cleaner and Extractor script..."
