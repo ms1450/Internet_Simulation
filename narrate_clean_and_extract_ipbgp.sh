@@ -30,7 +30,10 @@ if [[ -n ${neighbors[$AS]} ]]; then
     cmd="conf t
 router bgp ${AS}
 route-map ${POISON_AS}-POISON permit 10
-set as-path prepend ${POISON_AS}"
+set as-path prepend ${POISON_AS}
+end
+conf t
+router bgp ${AS}"
 
     for NEIGHBOR in "${neighbor_ips[@]}"; do
         NEIGHBOR_IP="179.${NEIGHBOR}.${AS}.${NEIGHBOR}"
