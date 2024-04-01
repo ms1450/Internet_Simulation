@@ -6,22 +6,16 @@ read -p "[i] Enter AS: " AS
 read -p "[i] Enter POISONED AS: " POISON_AS
 
 declare -A neighbors
-neighbors[15]="43,11,13"
+neighbors[14]="7,12"
+neighbors[15]="11,13,43"
 neighbors[16]="13"
-neighbors[17]="49,5"
+neighbors[17]="5,49"
 neighbors[18]="6,10"
-neighbors[20]="39,5,10"
-neighbors[24]="36,12"
-neighbors[28]="12,7"
-neighbors[29]="30,12,7"
-neighbors[32]="11,10"
-neighbors[36]="24,4"
-neighbors[40]="46,9"
-neighbors[42]="6,1"
-neighbors[43]="15,11,5"
-neighbors[44]="13,2"
-neighbors[46]="40,8,10"
-neighbors[49]="17,3"
+neighbors[19]="10,12"
+neighbors[20]="5,10,39"
+neighbors[22]="8,9"
+neighbors[24]="12,36"
+neighbors[33]="9"
 
 # Process only the specified AS
 if [[ -n ${neighbors[$AS]} ]]; then
@@ -31,7 +25,7 @@ if [[ -n ${neighbors[$AS]} ]]; then
     cmd="conf t
 router bgp ${AS}
 route-map ${POISON_AS}-POISON permit 10
-set as-path prepend ${POISON_AS}
+set as-path prepend ${POISON_AS} ${AS}
 end
 conf t
 router bgp ${AS}"
@@ -78,7 +72,7 @@ echo "[~] Sleeping for 20 Seconds to let BGP messages propagate..."
 sleep 20
 
 # Extract IP BGP Paths
-read -p "[+] Press enter to continue with the Configuration Extractor..."
+echo "[+] Extracting Configurations..."
 for ((current=1; current<=num; current++))
 do
     src_file="${base_dir}/platform/groups/g${current}/RTRA/looking_glass_json.txt"
