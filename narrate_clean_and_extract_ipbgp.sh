@@ -43,7 +43,8 @@ neighbor ${NEIGHBOR_IP} route-map ${POISON_AS}-POISON out"
 
     cmd+="
 end
-write file"
+write file
+"
 
 echo "CHECK THE FOLLOWING: "
 read -p "${cmd}"
