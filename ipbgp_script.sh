@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Prompt for AS and POISON_AS
+echo "AS Poisoning, Cleaning and Extracting Script"
 read -p "[i] Enter AS: " AS
 read -p "[i] Enter POISONED AS: " POISON_AS
 
@@ -45,18 +46,17 @@ neighbor ${NEIGHBOR_IP} route-map ${POISON_AS}-POISON out"
 end
 write file
 "
-
-echo "CHECK THE FOLLOWING: "
-read -p "${cmd}"
+echo "[+] Please verify the following commands:"
+echo "${cmd}"
+read -p "[+] Press enter to start BGP Poisoning..."
     docker exec "${AS}_RTRArouter" vtysh -c "$cmd"
 else
-    echo "No predefined neighbors for AS ${AS}. Please manually configure the poisoning."
+    echo "[-] No predefined neighbors for AS ${AS}. Please manually configure the poisoning."
 fi
-
+echo "[+] BGP Poisoning completed."
 
 # Wait for user input to proceed
-read -p "Press enter to continue with the Configuration Cleaner and Extractor script..."
-echo "Configuration Cleaner and Extractor"
+read -p "[+] Press enter to continue with the Configuration Cleaner..."
 base_dir=/home/student/Desktop/Simulation/
 ipbgp_dir="${base_dir}/IP_BGP_Path/"
 
@@ -77,8 +77,8 @@ echo "[+] Cleaning Completed"
 echo "[~] Sleeping for 20 Seconds to let BGP messages propagate..."
 sleep 20
 
-# Copy IP BGP Paths
-echo "[+] Copying IP BGP Paths"
+# Extract IP BGP Paths
+read -p "[+] Press enter to continue with the Configuration Extractor..."
 for ((current=1; current<=num; current++))
 do
     src_file="${base_dir}/platform/groups/g${current}/RTRA/looking_glass_json.txt"
