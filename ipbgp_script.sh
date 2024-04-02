@@ -31,7 +31,11 @@ conf t
 router bgp ${AS}"
 
     for NEIGHBOR in "${neighbor_ips[@]}"; do
-        NEIGHBOR_IP="179.${NEIGHBOR}.${AS}.${NEIGHBOR}"
+						 if (( NEIGHBOR > AS )); then
+									NEIGHBOR_IP="179.${AS}.${NEIGHBOR}.${NEIGHBOR}"
+						 else
+									NEIGHBOR_IP="179.${NEIGHBOR}.${AS}.${NEIGHBOR}"
+        fi
         cmd+="
 neighbor ${NEIGHBOR_IP} route-map ${POISON_AS}-POISON out"
     done
