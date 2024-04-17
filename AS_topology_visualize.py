@@ -70,15 +70,19 @@ if __name__ == '__main__':
     edges = []
     edge_types = []
 
+    # Get the Topology node and link information
+    topology_node_file = './Topology/Topology_Nodes_50.csv'
+    topology_links_file = './Topology/Topology_Links_50.csv'
+
     # Read the node data
-    with open('./Topology/Topology_Nodes_50.csv', 'r') as csvfile:
+    with open(topology_node_file, 'r') as csvfile:
         csvreader = csv.reader(csvfile)
         next(csvreader)  # Skip the header
         for row in csvreader:
             nodes[row[0]] = {'type': row[1]}
 
     # Read the edge data
-    with open('./Topology/Topology_Links_50.csv', 'r') as csvfile:
+    with open(topology_links_file, 'r') as csvfile:
         csvreader = csv.reader(csvfile)
         next(csvreader)  # Skip the header
         for row in csvreader:

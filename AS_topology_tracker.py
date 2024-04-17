@@ -9,7 +9,6 @@ def parse_ground_truth(link_file, ixp_file):
     p2p_links = []
     p2c_links = []
     ixp_links = []
-    #print("[+]\tParsing Links from Ground Truth - Topology Links")
     connections = []
 
     with open(link_file, 'r') as csvfile:
@@ -207,6 +206,7 @@ if __name__ == '__main__':
 
     ground_truth = parse_ground_truth(link_files, topology_file)
     prepoisoned_dict = store_prepoisoned_data(pre_poisoning_folder, ground_truth)
+
     # iterate_through_folder_results('./IP_BGP/Post-Poisoning/14', results_file)
     # iterate_through_folder_results('./IP_BGP/Post-Poisoning/15', results_file)
     # iterate_through_folder_results('./IP_BGP/Post-Poisoning/16', results_file)

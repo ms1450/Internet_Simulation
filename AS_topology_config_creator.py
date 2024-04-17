@@ -9,9 +9,11 @@ def print_AS_config(list_of_ASes, list_of_IXPs):
     with open('./Configuration/AS_config.txt', 'w', newline='\n') as file:
         for entry in list_of_ASes:
             if entry.as_id == 1:
-                string = str(entry.as_id) + "\tAS\tConfig\tl3_routers_krill.txt\tl3_links.txt\tempty.txt\tempty.txt\tempty.txt\n"
+                string = str(
+                    entry.as_id) + "\tAS\tConfig\tl3_routers_krill.txt\tl3_links.txt\tempty.txt\tempty.txt\tempty.txt\n"
             else:
-                string = str(entry.as_id) + "\tAS\tConfig\tl3_routers.txt\tl3_links.txt\tempty.txt\tempty.txt\tempty.txt\n"
+                string = str(
+                    entry.as_id) + "\tAS\tConfig\tl3_routers.txt\tl3_links.txt\tempty.txt\tempty.txt\tempty.txt\n"
             file.write(string)
         for entry in list_of_IXPs:
             string = str(entry.ixp_id) + "\tIXP\tConfig\tN/A\tN/A\tN/A\tN/A\tN/A\n"
@@ -114,6 +116,7 @@ def print_l3_links():
 
 
 if __name__ == "__main__":
+    # Get the Topology AS and IXP information
     as_file_name = '.\Topology\Topology_ASes_50.pkl'
     ixp_file_name = '.\Topology\Topology_IXPs_50.pkl'
     ASes = []
@@ -136,4 +139,3 @@ if __name__ == "__main__":
             print("[+]\tCompleted")
     else:
         print("[-]\tAS and IXP files not found.")
-

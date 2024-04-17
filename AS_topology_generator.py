@@ -65,7 +65,8 @@ def create_ASes(stub_count, transit_count, tier1_count):
     return list_of_ASes
 
 
-def assign_properties(list_of_ASes, p2p_range_stub, p2c_range_stub, p2p_range_transit, p2c_range_transit, p2c_range_tier1):
+def assign_properties(list_of_ASes, p2p_range_stub, p2c_range_stub, p2p_range_transit, p2c_range_transit,
+                      p2c_range_tier1):
     # Assign random p2p and p2c properties to each AS based on its type
     for current_system in list_of_ASes:
         if current_system.as_type == 'STUB':
@@ -374,25 +375,31 @@ def write_nodes_to_csv(ases, ixps, filename):
 
 
 if __name__ == "__main__":
-    # Initialize random seed for reproducibility
-    random.seed(42)
+    random.seed(42)  # Random Seed for reproducibility
 
-    # Example usage to demonstrate the creation and connection of ASes and IXPs
-    total_as = 50
-    num_stub = 37
-    num_transit = 9
-    num_tier1 = 4
+    # Adjust Parameters based on requirements
+    total_as = 50  # Total Number of ASes
+    num_stub = 37  # Number of Stub ASes
+    num_transit = 9  # Number of Transit ASes
+    num_tier1 = 4  # Number of Tier-1 ASes
+
+    p2p_range_stub = (0, 1)  # Range of P2P connections on Stub AS
+    p2c_range_stub = (1, 2)  # Range of P2C connections on Stub AS
+    p2p_range_transit = (2, 3)  # Range of P2P connections on Transit AS
+    p2c_range_transit = (5, 10)  # Range of P2C connections on Transit AS
+    p2c_range_tier1 = (6, 10)  # Range of P2C connections on Tier-1 AS
+
+    configuration_file_name = './Topology/Topology_' + str(total_as) + '.txt'  # Configuration File Location
+    as_file_name = './Topology/Topology_ASes_' + str(total_as) + '.pkl'  # AS Topology File Location
+    ixp_file_name = './Topology/Topology_IXPs_' + str(total_as) + '.pkl'  # IXP Topology File Location
+    csv_connections_file_name = './Topology/Topology_Links_' + str(total_as) + '.csv'  # Topology Links File Location
+    csv_nodes_file_name = './Topology/Topology_Nodes_' + str(total_as) + '.csv'  # Topology Nodes File Location
+
     ASes = create_ASes(num_stub, num_transit, num_tier1)
-    assign_properties(ASes, (0, 1), (1, 2), (2, 3), (5, 10), (6, 10))
+    assign_properties(ASes, p2p_range_stub, p2c_range_stub, p2p_range_transit, p2c_range_transit, p2c_range_tier1)
     create_p2c_connections(ASes)
     create_p2p_connections(ASes)
     IXPs = add_ixp_connections(ASes)
-
-    configuration_file_name = './Topology/Topology_' + str(total_as) + '.txt'
-    as_file_name = './Topology/Topology_ASes_' + str(total_as) + '.pkl'
-    ixp_file_name = './Topology/Topology_IXPs_' + str(total_as) + '.pkl'
-    csv_connections_file_name = './Topology/Topology_Links_' + str(total_as) + '.csv'
-    csv_nodes_file_name = './Topology/Topology_Nodes_' + str(total_as) + '.csv'
 
     print("[+]\tConfiguring Topology: ", configuration_file_name)
     with open(configuration_file_name, 'w') as file:
