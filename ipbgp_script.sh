@@ -5,6 +5,7 @@ echo "AS Poisoning, Cleaning and Extracting Script"
 read -p "[i] Enter AS: " AS
 read -p "[i] Enter POISONED AS: " POISON_AS
 
+# Manually define neighbors based on the topology
 declare -A neighbors
 neighbors[14]="7,12"
 neighbors[15]="11,13,43"

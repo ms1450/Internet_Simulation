@@ -17,7 +17,7 @@ def create_graph(nodes, edges, edge_types, exclude_ixp=False):
 
     node_color_map = {'Tier 1 AS': 'red', 'Transit AS': 'orange', 'Stub AS': 'yellow'}
     edge_color_map = {'P2P': 'blue', 'P2C': 'green'}
-    pos = nx.spring_layout(G, k=0.15, iterations=200)
+    pos = nx.spring_layout(G, k=0.1, iterations=500)
 
     node_color = [node_color_map.get(nodes[node]['type'], 'grey') for node in G.nodes()]
 
@@ -30,13 +30,13 @@ def create_graph(nodes, edges, edge_types, exclude_ixp=False):
         textposition='middle center',
         marker=dict(
             showscale=False,
-            size=35,
+            size=75,
             color=node_color,
             line_width=2
         ),
         textfont=dict(
             color='black',
-            size=10
+            size=22
         )
     )
 
@@ -46,7 +46,7 @@ def create_graph(nodes, edges, edge_types, exclude_ixp=False):
         x1, y1 = pos[edge[1]]
         edge_trace = go.Scatter(
             x=[x0, x1, None], y=[y0, y1, None],
-            line=dict(width=1, color=edge_color_map.get(edge_types[edges.index(edge)], 'grey')),
+            line=dict(width=5, color=edge_color_map.get(edge_types[edges.index(edge)], 'grey')),
             mode='lines',
             hoverinfo='none'
         )
@@ -88,11 +88,11 @@ if __name__ == '__main__':
     # Create and show the first graph (including all connections)
     print("[+]\tShowing Network Graph of ASes and IXPs")
     fig1 = create_graph(nodes, edges, edge_types)
-    pio.write_image(fig1, './Topology/Topology_Complete.png', width=1920, height=1080)
+    pio.write_image(fig1, './Topology/Topology_Complete_Landscape.png', width=1920, height=1920)
     # fig1.show()
 
     # Create and show the second graph (excluding IXPs)
     print("[+]\tShowing Network Graph of ASes")
     fig2 = create_graph(nodes, edges, edge_types, exclude_ixp=True)
-    pio.write_image(fig2, './Topology/Topology_ASes.png', width=1920, height=1080)
+    pio.write_image(fig2, './Topology/Topology_ASes_Landscape.png', width=1920, height=1920)
     # fig2.show()
